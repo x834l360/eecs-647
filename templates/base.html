@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forum</title>
+    <link href="/static/semantic/semantic.min.css" type="text/css" rel="stylesheet">
+    <script src="/static/semantic/semantic.min.js"></script>
+</head>
+<body>
+<div class="ui pointing menu">
+    <a class="item" href="/">Home</a>
+    <a class="item" href="/new">New Post</a>
+    <a class="item" href="/topics">Topics</a>
+    <a class="item" href="/user">Users</a>
+    <div class="right menu">
+        {% if is_authenticated %}
+            <a class="item" href="/my">My posts</a>
+            <a class="item" href="/logout">Logout</a>
+        {% else %}
+            <a class="item" href="/login">Login</a>
+            <a class="item" href="/register">Register</a>
+        {% endif %}
+    </div>
+</div>
+<div class="ui segment" style="padding: 1rem; margin: 1rem;">
+    {% block content %}
+    {% endblock %}
+</div>
+
+</body>
+</html>

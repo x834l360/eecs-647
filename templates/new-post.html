@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form class="ui form" method="post">
+        <div class="field">
+            <label for="">
+                Title
+                <input type="text" name="title">
+            </label>
+        </div>
+
+        <div class="field">
+            <label for="">
+                Category
+                <input name="category">
+            </label>
+        </div>
+
+        <div class="field">
+            <label for="">
+                Content
+                <textarea name="content"></textarea>
+            </label>
+        </div>
+
+        <div class="field">
+            <button class="ui button">Create</button>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3>user post something</h3>
+
+    {% for it in users %}
+        <div class="ui four cards">
+        <div class="card" style="padding: 1rem;">
+
+{#            <a class="item" href="/users/{{ it.userid }}">#}
+                <h4>
+                    {{ it.username }}
+                </h4>
+                <span>Post count: {{ it.cnt }}</span>
+{#            </a>#}
+        </div>
+        </div>
+    {% endfor %}
+{% endblock %}

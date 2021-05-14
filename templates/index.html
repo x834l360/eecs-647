@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <h3>Posts</h3>
+    <hr class="divider">
+
+    <div class="ui divided list">
+        {% for post in posts %}
+            <a class="item" href="/posts/{{ post.id }}">
+                <h3 class="header">{{ post.title }}</h3>
+                <div>
+                </div>
+            </a>
+            <div class="extra">
+                <span>topic:{{ post.category_topic }}</span>
+                <br>
+                <span>publish at:{{ post.post_date }}</span>
+                <br>
+
+                {% if post.comment_count %}
+                <span>comments: {{ post.comment_count }}</span>
+                {% endif %}
+            </div>
+            <br>
+        {% endfor %}
+    </div>
+
+{% endblock %}

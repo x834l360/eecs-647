@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if message %}
+        <div class="ui negative message">
+            <i class="close icon"></i>
+            <div class="header">ERROR</div>
+            <p>{{ message }} </p>
+        </div>
+    {% endif %}
+
+    <form method="post" class="ui form">
+        <div class="field">
+            <label>
+                Username
+                <input name="username" placeholder="username">
+            </label>
+        </div>
+        <div class="field">
+            <label>
+                password
+                <input type="password" name="password" placeholder="password">
+            </label>
+        </div>
+        <div class="field">
+            <label>
+                email
+                <input type="email" name="email" placeholder="email">
+            </label>
+        </div>
+        <div class="field">
+            <label>
+                phone
+                <input type="text" name="phone" placeholder="phone number">
+            </label>
+        </div>
+        <div class="field">
+            <button class="ui button">Submit</button>
+        </div>
+    </form>
+{% endblock %}
